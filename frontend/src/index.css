@@ -1,0 +1,54 @@
+@font-face {
+    font-family: "AlegreyaSansSC";
+    src: local("AlegreyaSansSC"),
+     url("fonts/AlegreyaSansSC/AlegreyaSansSC-Regular.ttf") format("truetype");
+}
+
+.swipe {
+  position: absolute;
+}
+
+.background {
+    background-color: #95b27a;
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.card {
+    width: 95vw;
+    height: 80vh;
+    background-color: #FFFFFF;
+    border-radius: 10% / 6%;
+    margin-top: 8vh;
+    margin-left: 2.5vw;
+}
+
+.card-title, .card-text {
+    font-family: AlegreyaSansSC;
+    color: #95b27a;
+}
+
+.card-title {
+    font-size: 5vh;
+    margin-top: 5vh;
+}
+
+.card-text {
+    font-size: 4vh;
+    margin-top: 5vh;
+}
+
+.start-button {
+    background-color: #FFFFFF;
+    border-color: #95b27a;
+    border-width: 0.4vh;
+    border-radius: 95% 80% 92% 80%/70% 95% 70% 95%;
+    transform: rotate(2deg);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:12.0-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    restart: always
+    environment:
+      POSTGRES_USER: card-app
+      POSTGRES_PASSWORD: card-app
+      POSTGRES_DB: card-app
+    networks:
+      - network-card-app
+
+  card-app-backend:
+    build: backend/.
+    environment:
+      DATABASE_PORT: 5432
+      DATABASE_HOST: postgres
+      DATABASE_NAME: card-app
+      DATABASE_USER: card-app
+      DATABASE_PASSWORD: card-app
+      API_KEY: secret
+    depends_on:
+      - postgres
+    restart: always
+    networks:
+      - network-card-app
+    ports:
+      - 8080:8080
+
+  card-app-frontend:
+    build: frontend/.
+    environment:
+      REACT_APP_BACKEND_URL: http://192.168.4.42:8080
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - card-app-backend
+    networks:
+      - network-card-app
+
+volumes:
+  postgres_data:
+
+networks:
+  network-card-app:
+    driver: bridge

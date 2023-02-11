@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "cards-app"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+backend-utils = "^0.2.0"
+python-dotenv = "^0.21.0"
+tortoise-orm = "^0.19.2"
+aerich = "^0.7.1"
+asyncpg = "^0.27.0"
+uvicorn = "^0.20.0"
+
+[tool.poetry.dev-dependencies]
+
+
+[tool.aerich]
+tortoise_orm = "settings.TORTOISE_CONFIG"
+location = "./migrations"
+src_folder = "./."
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
