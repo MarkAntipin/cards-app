@@ -66,13 +66,13 @@ const DeckCardsPage = () => {
               marginLeft: "5vh",
               marginRight: "5vh",
               fontSize: "3vh",
-              fontFamily: "AlegreyaSansSC",
+              fontFamily: "SourceSansPro",
             }}
           >
-            Мы надеемся, что вопросы помогли вам узнать друг друга лучше!<br/>
-            Наше приложение будет еще пополняться колодами для увлекательных бесед,<br/>
-            а пока подпишитесь на <a href="https://www.instagram.com/silno.krepko.ochen/">@silno.krepko.ochen</a>
-            чтобы не пропустить обновления.
+            Ой, конец! <br/>
+            Мы надеемся, что игра помогла вам узнать друг друга чуточку лучше! <br/>
+            Наш сайт совсем скоро пополниться новыми колодами для увлекательных бесед. <br/>
+            Чтобы не пропустить обновления, подпишитесь на аккаунт в запрещенной социальной сети <a href="https://www.instagram.com/silno.krepko.ochen/">@silno.krepko.ochen</a>
           </p>
         </div>
         <div className="center">
