@@ -1,7 +1,7 @@
 @font-face {
-    font-family: "AlegreyaSansSC";
-    src: local("AlegreyaSansSC"),
-     url("fonts/AlegreyaSansSC/AlegreyaSansSC-Regular.ttf") format("truetype");
+    font-family: "SourceSansPro";
+    src: local("SourceSansPro"),
+     url("fonts/SourceSansPro/SourceSansPro-Regular.ttf") format("truetype");
 }
 
 .swipe {
@@ -25,7 +25,7 @@
 }
 
 .card-title, .card-text {
-    font-family: AlegreyaSansSC;
+    font-family: SourceSansPro;
     color: #95b27a;
 }
 

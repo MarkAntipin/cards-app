@@ -25,8 +25,18 @@ AddDeckRequest = pydantic_model_creator(
 )
 
 
+class UpdateDeckRequest(BaseModel):
+    title: tp.Optional[str]
+    description: tp.Optional[str]
+    color: tp.Optional[str]
+
+
 class AddDeckResponse(BaseModel):
     id: int
+
+
+class UpdateDeckResponse(AddDeckResponse):
+    pass
 
 # =========== cards ===========
 
@@ -47,5 +57,19 @@ class AddCardRequest(BaseModel):
     sub_text: tp.Optional[str]
 
 
+class UpdateCardRequest(BaseModel):
+    deck_id: tp.Optional[int]
+    text: tp.Optional[str]
+    sub_text: tp.Optional[str]
+
+
 class AddCardResponse(BaseModel):
     id: int
+
+
+class DeleteCardResponse(AddCardResponse):
+    pass
+
+
+class UpdateCardResponse(AddCardResponse):
+    pass
