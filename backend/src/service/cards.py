@@ -22,7 +22,7 @@ class CardsService:
 
     @staticmethod
     async def get_cards(deck_id: int) -> tp.List[CardsModel]:
-        cards = await CardsModel.filter(deck_id=deck_id).order_by('id').all()
+        cards = await CardsModel.filter(deck_id=deck_id).order_by('-id').all()
         return cards
 
     @staticmethod
