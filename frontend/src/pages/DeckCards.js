@@ -19,7 +19,6 @@ const DeckCardsPage = () => {
   let counter = cards.length - 1
   const swiped = () => {
     counter -= 1
-    console.log(counter)
   }
 
 
